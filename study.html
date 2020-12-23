@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+
+<html lang="pt-br">  
+
+<head> 
+
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <title>Proffy | sua plataforma de estudos online</title> 
+
+    <link rel="stylesheet" href="/styles/partials/page-study.css"> 
+    <link rel="stylesheet" href="/styles/main.css"> <!--como o style css está dentro de uma pasta, ao invés do href ser "style.css", tem que ser "/nomedapasta/nomedoarquivo.css"--> 
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"> 
+
+</head> 
+
+<body id="page-study"> <!--para alterar vários elementos de mesmo nome ao mesmo tempo selecione o nomecom o mouse e depois aperte ctrl+D até selecionar todos de mesmo nome--> 
+
+    <div id="container"> 
+        <header class="page-header"> 
+            <div class="top-bar-container"> 
+                <a href="/"> 
+                <img src="/images/icons/back.svg" alt="Voltar">
+                </a> <!--a barra sozinha faz voltar pra página anteiror--> 
+                <img src="/images/logo.svg" alt="Proffy"> 
+            </div> 
+
+            <div class="header-content"> 
+                <strong>Esses são os proffys disponíneis</strong><!--tag para textos com fonte vir com fonte bold--> 
+                <form id="search-teachers"> 
+                    <div class="select-block"> 
+                        <label for="subject">Matéria</label> <!--a tag label mostra o campo que ela está atrelada. o campo está no form, nesse caso o subject, que é o nome do campo abaixo. ele vai procurar o nome do select que tem o name = o form.--> 
+                        <select name="subject" id="subject"> <!--o id vai ajudar a gente qnd for usar o js. o name deve ser único, se não vai ter problema no backend--> 
+                            <option value="" disabled="" hidden="">Selecione uma opção</option> <!--o valor inicial está vazio e desablilitado por padrão--> 
+                            <option value="1">Artes</option> 
+                            <option value="2">Biologia</option> 
+                            <option value="3">Ciências</option> 
+                            <option value="4">Educação Física</option> 
+                            <option value="5">Física</option> 
+                            <option value="6">Geografia</option> 
+                            <option value="7">História</option> 
+                            <option value="8">Matemática</option> 
+                            <option value="9">Português</option> 
+                            <option value="10">Química</option> 
+                        </select> 
+                    </div> 
+
+                    <div class="select-block"> 
+                        <label for="weekday">Dia da semana</label> 
+                        <select name="weekday" id="weekday"> 
+                            <option value="" disabled="" hidden="">Selecione uma opção</option> 
+                            <option value="0">Domingo</option> 
+                            <option value="1">Segunda</option> 
+                            <option value="2">Terça-feira</option> 
+                            <option value="3">Quarta-feira</option> 
+                            <option value="4">Quinta-feira</option> 
+                            <option value="5">Sexta-feira</option> 
+                            <option value="6">Sábado</option> 
+                        </select> 
+                    </div> 
+
+                    <div class="input-block"> 
+                        <label for="time">Hora</label> 
+                        <input name="time" id="time" type="time"> <!--podia ser type="number" min="0" max="24" após name e id--> 
+                    </div> 
+
+                    <button type="submit">Filtrar</button> <!--quando o botão do tipo submit está dentro do form, ele vai pegar o form e enviar o formulário.--> 
+                </form> <!--pede uma ação--> 
+            </div> 
+        </header> 
+
+        <main> <!--enquanto o header é a parte de cima da página, o main é o meio--> 
+
+            <article class="teacher-item"> 
+
+                <header> 
+                    <img  
+                        src="https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4"  
+                        alt="Diego Fernandes"> 
+                    <div> 
+                        <strong>Diego Fernandes</strong> 
+                        <span>Química</span> 
+                    </div> 
+                </header> 
+
+                <p>Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p> 
+
+                <footer> 
+                    <p>Preço/hora<strong>R$ 20,00</strong> 
+                    </p> 
+                    <button type="button"> 
+                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato 
+                    </button> 
+                </footer> 
+            </article> 
+
+
+            <article class="teacher-item"> 
+
+                <header> 
+                    <img  
+                        src="https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4"  
+                        alt="Diego Fernandes"> 
+                    <div> 
+                        <strong>Diego Fernandes</strong> 
+                        <span>Química</span> 
+                    </div> 
+                </header>
+
+                <p>Entusiasta das melhores tecnologias de química avançada.<br>
+                <br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p> 
+
+                <footer> 
+                    <p>Preço/hora<strong>R$ 20,00</strong> 
+                    </p> 
+
+                    <button type="button"> 
+                        <img src="/images/icons/whatsapp.svg" alt="Whatsapp">Entrar em contato 
+                    </button> 
+                </footer> 
+            </article> 
+        </main> 
+    </div> 
+</body> 
+
+</html> 

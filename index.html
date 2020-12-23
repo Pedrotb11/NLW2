@@ -1,34 +1,46 @@
-<!--na tag head deve ir todas as configurações da página e na tag body, todo o conteúdo visível--> 
-
-<!--hypertext markup langauge ou linguagem de marcação de hipertexto (que são textos web, com links videos, etc...)--> 
-
 <!DOCTYPE html> 
 
-<html lang="pt-br"> <!--html é a tag e lang é um atributo--> 
-
+<html lang="pt-br">  
 <head> 
 
     <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--a tag meta é a que configura os metadados. Essa está configurando o documento para que possamos adaptar para telas maiores ou menores--> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
     <title>Proffy | sua plataforma de estudos online</title> 
-    <link rel="stylesheet" href="style.css"> 
+
+    <link rel="stylesheet" href="/styles/partials/page-landing.css"> 
+    <link rel="stylesheet" href="/styles/main.css"> <!--como o style css está dentro de uma pasta, ao invés do href ser "style.css", tem que ser "/nomedapasta/nomedoarquivo.css"--> 
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"> 
 
 </head> 
 
-<body id="page-landing"> <!--caso a tela esteja dividida e vc precise ajustar a tela apetre Alt+z--> 
+<body id="page-landing"> 
+
     <div id="container"> 
+        <div class="logo-container"> 
+            <img src="/images/logo.svg" alt="Proffy"> 
+            <h2>Sua plataforma de estudos online</h2> 
+        </div> 
 
-        <h1>Proffy</h1> 
-        <p>Sua plataforma de estudos online</p>
+        <img class="hero-image" src="/images/landing.svg" alt="plataforma de estudos"> 
 
-        <!--dentro da tag img, "src" é a fonte, pode ser um link de uma imagem da web ou um caminho dentro do PC msm. "alt" é uma alternativa, caso a imagem não apareça, deve ter um texto dizendo que imagem tinha ali. O "alt" também serve para acessibilidade, quando o conteúdo da página precisa ser lido.--> 
+         <div class="buttons-container"> 
+             <a class="study" href="/study.html"> 
+                <img src="/images/icons/study.svg" alt="Estudar"> 
+                Estudar 
+            </a> 
 
-        <button>Estudar</button> 
-        <button>Dar Aulas</button> 
+            <a class="give-classes" href="/give-classes.html"> 
+                <img src="/images/icons/give-classes.svg" alt="Dar aulas"> 
+                Dar aulas 
+            </a> 
+         </div> 
 
+         <p class="total-connections"> 
+             total de 200 conexões já realizadas 
+             <img src="/images/icons/purple-heart.svg" alt="Coração roxo"> 
+         </p> 
     </div> 
-
 </body> 
 
 </html> 
